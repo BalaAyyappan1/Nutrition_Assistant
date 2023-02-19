@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Assistant | Profile</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="{{ url_for('profile') }}" method="POST">
+    <div class="profile__">
+        <div class="profile-logo">
+            <img src="/static/assests/Images/logo.png" width="100" height="100">
+        </div>
+        <div class="profile__body">
+            <h5 class='session-username'>{{ session['username'] }}</h5>
+            
+            <div class="profile-img1">
+                <img src="/static/assests/Images/Lifestyle2_update.jpg" width="250" height="350">
+            </div>
+            <div class="profile-img2">
+                <img src="/static/assests/Images/profile-image-1.jpg" width="220" height="312">
+            </div>
+            <div class="profile-img3">
+                <img src="/static/assests/Images/profile-image-2.jpg" width="450" height="320">
+            </div>
+            <div class="profile-img4">
+                <img src="/static/assests/Images/profile-image-3.jpg" width="450" height='auto'>
+            </div>
+            <div class="diet-text">
+                <h2>Diet Flexibility and <br> Fitness Freedom</h2>
+            </div>
+            <span class="diet-text-2">With the right data, reach your fitness goals faster and <br>work with greater efficiency.</span>
+            
+            <span class="find-products"><h4>Want to Find the Nutrition value <br> of your Food</h4></span>
+            <div class='return-result'>
+            <span class='r0'>{{ result }}</span>
+            <span class='r1'>{{ result1 }}</span>
+            <span class='r2'>{{ result2 }}</span>
+            <span class='r3'>{{ result3 }}</span>
+            <span class='r4'>{{ result4 }}</span>
+            <span class='r5'>{{ result5 }}</span>
+            <span class='r6'>{{ result6 }}</span>
+            <span class='r7'>{{ result7 }}</span>
+            </div>
+            <div class="wrapper">
+                <input class="search" name="foodname" placeholder="Search here" type="text" >
+            </div>  
+            
+
+        </div>
+       
+        
+    </div>
+        
+</body>
+
+</html>
